@@ -72,3 +72,52 @@ do
     controllo = int.Parse(Console.ReadLine());
 
 }while(controllo != 0);
+// snack 4
+Console.WriteLine("----SCOMMESA /3----");
+Random generatore = new Random();
+int numRandom = generatore.Next(1,99);
+bool controlloUtente = true;
+
+bool divisibileX3 = numRandom%3 == 0 ? true : false;
+
+do
+{
+    Console.WriteLine("Il numero generato è divisibile per 3? si o no?");
+    string risposta = Console.ReadLine().ToLower();
+
+    //bool controlloUtente = (risposta == "si" || risposta == "no") ? true : false;
+    if(risposta == "si" || risposta == "no")
+    {
+         controlloUtente= false;
+
+    }
+
+
+    if (risposta == "no")
+    {
+        if (divisibileX3)
+        {
+            Console.WriteLine("Hai sbagliato");
+        }
+        else
+        {
+            Console.WriteLine("Hai idovinato");
+        }
+    }
+    else if(risposta == "si"){
+        if (divisibileX3)
+        {
+            Console.WriteLine("Hai indovinato");
+        }
+        else
+        {
+            Console.WriteLine("Hai sbagliato");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Non hai inserito una risposta valida");
+    }
+
+} while(controlloUtente);
+Console.WriteLine(numRandom);
