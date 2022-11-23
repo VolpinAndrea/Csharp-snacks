@@ -11,3 +11,17 @@ foreach (string mese in mesi)
 {
     Console.WriteLine(mese);
 }
+//Snack 2
+int[] numeri = {1,2,45,23,54,65,87,234,657,1243,6,765,8,35,7,8,35,7,8,686};
+foreach(int numero in numeri)
+{
+    if (numero % 2 == 0)
+    {
+        Console.WriteLine("il numero è pari:" + numero);
+    }
+    else
+    {
+
+        Console.WriteLine("il numero è dispari:" + numero);
+    }
+}
