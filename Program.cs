@@ -78,14 +78,15 @@ Random generatore = new Random();
 int numRandom = generatore.Next(1,99);
 bool controlloUtente = true;
 
-bool divisibileX3 = numRandom%3 == 0 ? true : false;
+//bool divisibileX3 = numRandom%3 == 0 ? true : false;
+bool divisibileX3 = numRandom % 3 == 0;
 
 do
 {
     Console.WriteLine("Il numero generato è divisibile per 3? si o no?");
     string risposta = Console.ReadLine().ToLower();
 
-    //bool controlloUtente = (risposta == "si" || risposta == "no") ? true : false;
+    //bool controlloUtente = (risposta == "si" || risposta == "no") ? false : true;  NON VA :(
     if(risposta == "si" || risposta == "no")
     {
          controlloUtente= false;
