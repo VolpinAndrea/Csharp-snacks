@@ -25,3 +25,23 @@ foreach(int numero in numeri)
         Console.WriteLine("il numero è dispari:" + numero);
     }
 }
+for(int i = 0; i < numeri.Length; i++)
+{
+    if (numeri[i] % 2 != 0)
+    {
+        numeri[i]++;
+
+    }
+}
+foreach (int numero in numeri)
+{
+    if (numero % 2 == 0)
+    {
+        Console.WriteLine("il numero è pari:" + numero);
+    }
+    else
+    {
+
+        Console.WriteLine("il numero è dispari:" + numero);
+    }
+}
