@@ -60,6 +60,9 @@ do
     if(pUno < pDue)
     {
         Console.WriteLine("la prima parola è piu CORTA della seconda");
+    }else if(pDue == pUno)
+    {
+        Console.WriteLine("le parole sono lunghe uguali");
     }
     else
     {
